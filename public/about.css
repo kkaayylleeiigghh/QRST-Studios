@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #f4f4f4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+/* Dropdown for Profile */
+.profile, .shopping {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-dropdown, .shopping-dropdown {
+    position: absolute;
+    right: 0;
+    background: white;
+    min-width: 150px;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+}
+
+.profile:hover .profile-dropdown,
+.shopping:hover .shopping-dropdown {
+    display: block;
+}
+
+.profile-dropdown a, .shopping-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+
+.profile-dropdown a:hover, .shopping-dropdown a:hover {
+    background: #f4f4f4;
+}
+
+/* Cart Styles */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+.cart img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hamburger Menu (Pending Implementation) */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* About Page Specific */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px;
+    color: #333333;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.about-container h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333333;
+}
+
+.about-container ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.about-container p {
+    margin: 10px 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 1em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Logo and Social Section Styling */
+.footer-logo-section {
+    flex: 1;
+    display: flex; /* Align items side by side */
+    align-items: center;
+    justify-content: center; /* Center them horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-logo {
+    margin-right: 20px; /* Add space between logo and social media icons */
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 10px; /* Add space between social media icons */
+}
+
+.footer-social-links a img {
+    width: 40px; /* Smaller icon size */
+    height: 40px;
+}
+
+.footer-logo-section p {
+    flex-basis: 100%; /* Move copyright text below */
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .about-container {
+        width: 95%;
+    }
+}
+
